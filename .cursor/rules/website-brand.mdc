@@ -1,0 +1,86 @@
+---
+description: AISIA marketing site brand tokens \u2014 colors, typography, motion, glass utilities, favicon usage
+globs: src/**/*.{tsx,ts,css,html},index.html
+alwaysApply: false
+---
+
+# Website Brand Tokens
+
+The public site must feel like a sibling of `prototype-2`. If you diverge from these tokens without a strategy note in `.cursor/strategy/STRATEGY.md`, you have violated brand parity.
+
+## Colors
+
+- Background base: `void = #030712`.
+- Aurora accents (never invent new ones):
+  - `aurora.cyan = #22d3ee`
+  - `aurora.violet = #a78bfa`
+  - `aurora.rose = #fb7185`
+  - `aurora.amber = #fbbf24`
+- Per-domain accents come from `src/data/domains.ts` (mirror of `prototype-2/src/data/lifeAreas.ts`). Do not override with generic brand cyan.
+- The site is **dark-only**. No light-theme toggle on the marketing site (the app has one; the site does not).
+
+## Typography
+
+- **Display:** `Syne` \u2014 hero headline, section headings, hero orbit labels. Weights 500\u2013800.
+- **Body:** `DM Sans` \u2014 all prose, buttons, form fields. Weights 400\u2013700.
+- **Data / eyebrows:** `IBM Plex Mono` \u2014 uppercase eyebrow labels, stat readouts, timestamps, mono chips. Weights 400\u2013600.
+- Load once in `index.html` via a single Google Fonts `<link>` with `display=swap` and `preconnect` to `fonts.googleapis.com` and `fonts.gstatic.com`.
+
+## Glass utilities (identical to prototype-2)
+
+Copy verbatim into `src/index.css`:
+
+```css
+.liquid-glass {
+  @apply bg-white/[0.04] backdrop-blur-2xl border border-white/[0.09];
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 1px 0 rgba(255,255,255,0.06) inset,
+    0 12px 40px rgba(0,0,0,0.45);
+}
+.liquid-glass-strong {
+  @apply bg-white/[0.07] backdrop-blur-3xl border border-white/[0.12];
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.06) inset,
+    0 1px 0 rgba(255,255,255,0.08) inset,
+    0 20px 60px rgba(0,0,0,0.55);
+}
+.text-gradient-aurora {
+  background-image: linear-gradient(135deg, #22d3ee 0%, #a78bfa 45%, #fb7185 100%);
+  @apply bg-clip-text text-transparent;
+}
+```
+
+## Motion
+
+- **Entrance easing:** `[0.22, 1, 0.36, 1]`.
+- **Duration:** 300\u2013600 ms UI, 800 ms+ for pipeline / canvas sync reveals.
+- **Stagger:** 40\u201380 ms between grid/card items.
+- Wrap the app in `<MotionConfig reducedMotion="user">` so animations respect user preferences.
+- No scroll-jacking. No parallax that jitters below 60 fps.
+
+## Aurora background
+
+Reuse the `AuroraMesh` motif from prototype-2 as `src/components/ui/AuroraMesh.tsx`. Three blurred radial blobs (cyan, violet, rose) on `position: fixed inset-0 -z-10`, plus a faint grid overlay and noise SVG. Do not remove.
+
+## Favicon and brand mark
+
+- Canonical favicon: copy `prototype-2/public/favicon.svg` verbatim to `public/favicon.svg`.
+- Brand mark component: an inline SVG rendering the same shape (dark rounded rect, cyan ring, cyan center dot, three orbital dots in violet/rose/amber). Enlarge, do not redraw.
+- Wordmark: `AISIA` set in Syne, weight 700, tracking `-0.02em`. Optional accent \u2014 aurora gradient underline or ring.
+
+## Icons
+
+- Use `lucide-react` only. Same library as the app.
+- Icon color follows the current text color unless it's a per-domain accent, in which case set `style={{ color: area.accent }}`.
+
+## Anti-tokens
+
+Do not introduce any of:
+
+- Purple gradients on white backgrounds.
+- Flat Material-style shadows.
+- Google Fonts Roboto / Inter (we already have DM Sans).
+- Icon libraries other than Lucide.
+- CSS-in-JS runtime libraries (styled-components, emotion). Tailwind + `index.css` only.
+- Additional font families.
