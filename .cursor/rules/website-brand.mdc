@@ -24,7 +24,7 @@ The public site must feel like a sibling of `prototype-2`. If you diverge from t
 - **Display:** `Syne` \u2014 hero headline, section headings, hero orbit labels. Weights 500\u2013800.
 - **Body:** `DM Sans` \u2014 all prose, buttons, form fields. Weights 400\u2013700.
 - **Data / eyebrows:** `IBM Plex Mono` \u2014 uppercase eyebrow labels, stat readouts, timestamps, mono chips. Weights 400\u2013600.
-- Load once in `index.html` via a single Google Fonts `<link>` with `display=swap` and `preconnect` to `fonts.googleapis.com` and `fonts.gstatic.com`.
+- Self-host via `@fontsource/*` packages imported in `src/lib/fonts.ts`. Do not load fonts from Google Fonts or other CDNs.
 
 ## Glass utilities (identical to prototype-2)
 

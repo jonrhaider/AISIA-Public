@@ -1,0 +1,28 @@
+---
+description: AISIA marketing legal pages — structure, entity facts, claims alignment
+globs: src/pages/PrivacyPage.tsx,src/pages/TermsPage.tsx,src/pages/SecurityPage.tsx,src/content/**/*.ts,src/components/LegalPage.tsx,src/sections/Footer.tsx
+alwaysApply: false
+---
+
+# Legal Pages Conventions
+
+Load `.cursor/skills/legal-pages/SKILL.md` when editing matched files.
+
+## Layout
+
+- Use `LegalPage` from `src/components/LegalPage.tsx` for all legal routes
+- Content lives in `src/content/*.ts` as `LegalDocument` exports
+- Body text: `text-[15px] text-white/70 leading-relaxed` inside `liquid-glass-strong` panel
+- Include `lastUpdated` in header; bump on material policy changes
+
+## Entity (fixed)
+
+HaiBuilt Inc · 2108 N ST #4268, Sacramento, CA 95816, USA · hello@aisia.app
+
+## Footer sync
+
+Footer Legal links must use React Router paths (`/privacy`), not `#` anchors.
+
+## Claims
+
+Marketing copy must match policy: no trackers, self-hosted fonts, waitlist localStorage until backend ships.

@@ -22,7 +22,7 @@ const LINKS = {
     { label: 'Contact', href: 'mailto:hello@aisia.app' },
   ],
   Legal: [
-    { label: 'Privacy', href: '#privacy' },
+    { label: 'Privacy', href: '/privacy' },
     { label: 'Terms', href: '#terms' },
     { label: 'Security', href: '#security' },
   ],

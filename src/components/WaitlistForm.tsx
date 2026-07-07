@@ -1,4 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
+import { Link } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight, Check, Loader2 } from 'lucide-react'
 import { currentEntry, isValidEmail, saveEntry, clearEntry } from '../lib/waitlist'
@@ -143,8 +144,11 @@ export function WaitlistForm({ id, variant = 'hero', className = '' }: WaitlistF
         </p>
       )}
       {state !== 'success' && (
-        <p className="mt-3 text-[11px] font-mono uppercase tracking-[0.18em] text-white/35">
-          No spam. Just launch news + early access.
+        <p className="mt-3 text-[11px] text-white/40 leading-relaxed">
+          No spam. Just launch news + early access.{' '}
+          <Link to="/privacy" className="underline underline-offset-2 hover:text-white/60 transition-colors">
+            Privacy Policy
+          </Link>
         </p>
       )}
     </div>

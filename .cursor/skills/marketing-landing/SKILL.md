@@ -89,7 +89,7 @@ Every section on the landing page must satisfy **all four**:
 The marketing site and the app must feel like siblings. Enforce:
 
 - **Colors:** `void #030712` background; aurora accents `cyan #22d3ee`, `violet #a78bfa`, `rose #fb7185`, `amber #fbbf24`; per-domain accents come from `LIFE_AREAS` (do not invent new colors).
-- **Fonts:** `Syne` (display), `DM Sans` (body), `IBM Plex Mono` (data/eyebrows/labels). Load once in `index.html` via Google Fonts, same weights as prototype-2.
+- **Fonts:** `Syne` (display), `DM Sans` (body), `IBM Plex Mono` (data/eyebrows/labels). Self-hosted via `@fontsource/*` in `src/lib/fonts.ts` — same weights as prototype-2.
 - **Glass:** `.liquid-glass` and `.liquid-glass-strong` utilities identical to prototype-2's `index.css`.
 - **Motion easing:** entrance `[0.22, 1, 0.36, 1]`, duration 300–600 ms UI, 800 ms+ for the pipeline reveal.
 - **Favicon / brand mark:** the SVG from `prototype-2/public/favicon.svg` (dark rect, cyan center circle, orbital dots) is the canonical mark. Enlarge (not redraw) for the site's brand mark.
