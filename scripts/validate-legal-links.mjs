@@ -24,6 +24,8 @@ const app = readFileSync(appPath, 'utf8')
 
 const required = [
   { label: 'Privacy', href: '/privacy', route: '/privacy' },
+  { label: 'Terms', href: '/terms', route: '/terms' },
+  { label: 'Security', href: '/security', route: '/security' },
 ]
 
 for (const { label, href, route } of required) {
@@ -37,8 +39,8 @@ for (const { label, href, route } of required) {
   }
 }
 
-if (/href:\s*['"]#privacy['"]/.test(footer)) {
-  fail('Footer still contains placeholder #privacy anchor')
+if (/href:\s*['"]#(privacy|terms|security)['"]/.test(footer)) {
+  fail('Footer still contains placeholder #privacy / #terms / #security anchors')
 }
 
 console.log('[validate-legal-links] PASS — required legal routes wired')

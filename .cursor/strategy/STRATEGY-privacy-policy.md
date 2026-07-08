@@ -56,7 +56,7 @@
 ## Alignment Critique
 
 - **What am I assuming?**
-  - AISIA is a US-based early-stage product (`hello@aisia.app`); primary audience English-speaking, possibly global.
+  - AISIA is a US-based early-stage product (`aisia.io@haibuilt.com`); primary audience English-speaking, possibly global.
   - First deliverable is the **marketing website** privacy policy, not the full in-app policy (app is `prototype-2`, pre-auth).
   - "Strong" prioritizes accuracy + trust alignment over maximal legal verbosity.
   - User wants the **research map** now; implementation is a follow-on task after business facts are gathered.
@@ -98,7 +98,7 @@ Use this as the master checklist before drafting or coding. Mark each item **Res
 | B4 | Hosting / CDN logs | Cloudflare Pages | Provider processes IP, request metadata | Disclosed in policy §6 | **Resolved** |
 | B5 | Analytics / ads / pixels | None in codebase | No | Policy should state none; document if added later | Resolved |
 | B6 | Tracking cookies | None (react-router `cookie` dep is not site-set) | No | No cookie banner today; note essential vs non-essential if cookies added | Resolved |
-| B7 | `mailto:hello@aisia.app` | User-initiated email client | User's email provider | Not collection by AISIA until user sends | Resolved |
+| B7 | `mailto:aisia.io@haibuilt.com` | User-initiated email client | User's email provider | Not collection by AISIA until user sends | Resolved |
 | B8 | Sign-in link (`APP_URL`) | Nav/footer → external app origin | Leaves marketing site | Policy should clarify separate app terms when live | Partial |
 | B9 | Open Graph / meta tags | `index.html` | No PII | No collection; social previews only | Resolved |
 | B10 | Framer Motion / Lucide / React | Bundled first-party JS | No | No third-party data sharing from libs themselves | Resolved |
@@ -132,7 +132,7 @@ Use this as the master checklist before drafting or coding. Mark each item **Res
 
 | # | Consideration | Research question |
 |---|---------------|-------------------|
-| E1 | Privacy request inbox | Is `hello@aisia.app` the official channel? SLA for response? |
+| E1 | Privacy request inbox | Is `aisia.io@haibuilt.com` the official channel? SLA for response? |
 | E2 | Data deletion | How to delete waitlist emails today (no backend)? Future process? |
 | E3 | Data export | Required for GDPR; likely N/A until accounts exist |
 | E4 | Breach notification | Internal playbook — not on marketing page but affects Security page cross-link |

@@ -14,7 +14,7 @@ export const PRIVACY_POLICY: LegalDocument = {
       title: '1. Who we are',
       paragraphs: [
         'AISIA is a product of HaiBuilt Inc, located at 2108 N ST #4268, Sacramento, CA 95816, USA.',
-        'For privacy questions about this website, contact us at hello@aisia.app.',
+        'For privacy questions about this website, contact us at aisia.io@haibuilt.com.',
       ],
     },
     {
@@ -32,7 +32,7 @@ export const PRIVACY_POLICY: LegalDocument = {
       bullets: [
         'Waitlist email — If you join the waitlist, your email address is stored in your browser\'s local storage on your device. Today, that information is not sent to our servers. We use it only to show you a confirmation on this device.',
         'Technical logs — When you visit this site, Cloudflare Pages (our hosting provider) may automatically process standard web-server data such as your IP address, browser type, referring page, and request timestamps. We do not use this data to profile you or for advertising.',
-        'Communications — If you email us at hello@aisia.app, we receive whatever you choose to include in your message.',
+        'Communications — If you email us at aisia.io@haibuilt.com, we receive whatever you choose to include in your message.',
       ],
     },
     {
@@ -95,7 +95,7 @@ export const PRIVACY_POLICY: LegalDocument = {
       title: '10. Your choices and rights',
       paragraphs: [
         'You can clear waitlist data stored on your device at any time through your browser settings or the waitlist reset control.',
-        'If you are a California resident, you may have rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information we collect, to request deletion, and to opt out of the sale or sharing of personal information. We do not sell personal information. To exercise your rights, email hello@aisia.app.',
+        'If you are a California resident, you may have rights under the California Consumer Privacy Act (CCPA), including the right to know what personal information we collect, to request deletion, and to opt out of the sale or sharing of personal information. We do not sell personal information. To exercise your rights, email aisia.io@haibuilt.com.',
         'Residents of other U.S. states may have similar rights under applicable state privacy laws. Contact us and we will respond in line with applicable law.',
       ],
     },
@@ -120,7 +120,7 @@ export const PRIVACY_POLICY: LegalDocument = {
         'HaiBuilt Inc',
         '2108 N ST #4268',
         'Sacramento, CA 95816, USA',
-        'Email: hello@aisia.app',
+        'Email: aisia.io@haibuilt.com',
       ],
     },
   ],

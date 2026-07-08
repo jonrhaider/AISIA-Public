@@ -18,7 +18,7 @@ description: >-
 
 - **Legal entity:** HaiBuilt Inc
 - **Address:** 2108 N ST #4268, Sacramento, CA 95816, USA
-- **Privacy contact:** hello@aisia.app
+- **Privacy contact:** aisia.io@haibuilt.com
 - **Audience:** US emphasis
 - **Hosting:** Cloudflare Pages
 - **Fonts:** Self-hosted via `@fontsource/*` — no Google Fonts CDN
@@ -46,8 +46,8 @@ Render via `LegalPage` — do not duplicate layout per page.
 | Page | Covers |
 |------|--------|
 | Privacy | Marketing site data: waitlist localStorage, Cloudflare logs, email contact |
-| Terms | (future) Site use, disclaimers, IP |
-| Security | (future) How we protect data — cross-link from Privacy |
+| Terms | Site use, disclaimers, acceptable use, IP, liability, governing law |
+| Security | How we protect the marketing site — HTTPS, hosting, minimization, vulnerability reporting |
 
 **Marketing site ≠ AISIA app.** If the app collects accounts or conversation data, say so and point to a separate policy when it exists.
 

@@ -19,12 +19,12 @@ const LINKS = {
   Company: [
     { label: 'About', href: '/about' },
     { label: 'Sign in', href: APP_URL },
-    { label: 'Contact', href: 'mailto:hello@aisia.app' },
+    { label: 'Contact', href: 'mailto:aisia.io@haibuilt.com' },
   ],
   Legal: [
     { label: 'Privacy', href: '/privacy' },
-    { label: 'Terms', href: '#terms' },
-    { label: 'Security', href: '#security' },
+    { label: 'Terms', href: '/terms' },
+    { label: 'Security', href: '/security' },
   ],
 }
 
