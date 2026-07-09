@@ -136,3 +136,54 @@
     box-shadow: 0 0 0 0 rgba(34, 211, 238, 0);
   }
 }
+
+/* Domains logo-style infinite carousel — pauses on hover */
+@keyframes domain-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.domains-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: domain-marquee 55s linear infinite;
+  will-change: transform;
+}
+
+.domains-marquee:hover .domains-marquee-track,
+.domains-marquee:focus-within .domains-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Feather edges via opacity mask — no solid overlay boxes */
+.domains-marquee-mask {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 6%,
+    black 14%,
+    black 86%,
+    rgba(0, 0, 0, 0.35) 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.35) 6%,
+    black 14%,
+    black 86%,
+    rgba(0, 0, 0, 0.35) 94%,
+    transparent 100%
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .domains-marquee-track {
+    animation: none;
+  }
+}

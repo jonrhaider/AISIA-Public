@@ -91,7 +91,7 @@ export function HowItWorks() {
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className="relative"
       >
-        <div className="absolute -top-6 left-1/2 -translate-x-1/2 z-20">
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
           <div className="chip-mono !bg-void/80 !border-aurora-cyan/40">
             <Zap className="w-3 h-3 text-aurora-cyan animate-pulse" />
             <span className="text-aurora-cyan">Live extraction</span>

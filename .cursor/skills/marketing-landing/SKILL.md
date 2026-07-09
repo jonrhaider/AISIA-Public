@@ -26,7 +26,7 @@ Crisp, focused on value proposition and CTA. Sections in order:
 
 1. **Nav** — Domains, How it works, Pricing, About · Join waitlist
 2. **Hero** — organization promise + waitlist
-3. **Domains** — eight-domain grid (visual proof); link to About for guided threads
+3. **Domains** — eight-domain infinite carousel (visual proof, pauses on hover); link to About for guided threads
 4. **How it works** — Reflect → Extract → Canvas pipeline
 5. **Pricing**
 6. **Final CTA**
