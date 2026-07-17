@@ -12,7 +12,7 @@ description: >-
 
 - Adding or editing `/privacy`, `/terms`, `/security`, or other legal routes
 - Updating footer Legal links
-- Changing data practices that affect public copy (waitlist, fonts, analytics, hosting)
+- Changing data practices that affect public copy (trial CTAs, fonts, analytics, hosting)
 
 ## Entity facts (do not invent)
 
@@ -29,7 +29,7 @@ description: >-
 - Plain language, confident, honest — same family as `marketing-landing`, not dense legalese
 - Short paragraphs; numbered sections for scanability
 - Say what you do **and** what you do not do
-- Never contradict footer tagline ("Your data is yours · No trackers on this site") or waitlist microcopy
+- Never contradict footer tagline ("Your data is yours · No trackers on this site") or trial CTA copy
 
 ## Required structure
 
@@ -45,7 +45,7 @@ Render via `LegalPage` — do not duplicate layout per page.
 
 | Page | Covers |
 |------|--------|
-| Privacy | Marketing site data: waitlist localStorage, Cloudflare logs, email contact |
+| Privacy | Marketing site data: Cloudflare logs, email contact; trial signup happens in the app |
 | Terms | Site use, disclaimers, acceptable use, IP, liability, governing law |
 | Security | How we protect the marketing site — HTTPS, hosting, minimization, vulnerability reporting |
 
@@ -53,7 +53,7 @@ Render via `LegalPage` — do not duplicate layout per page.
 
 ## Claims alignment checklist (run before ship)
 
-- [ ] Waitlist behavior matches `src/lib/waitlist.ts` (localStorage today)
+- [ ] No on-site form or localStorage data collection; trial signup happens in the AISIA app
 - [ ] No analytics/tracker claims if none in `package.json` dependencies
 - [ ] No "no third parties" if any third-party script or CDN is added
 - [ ] Fonts loaded only from `@fontsource/*` (see `src/lib/fonts.ts`)

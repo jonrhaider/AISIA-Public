@@ -25,4 +25,4 @@ Footer Legal links must use React Router paths (`/privacy`), not `#` anchors.
 
 ## Claims
 
-Marketing copy must match policy: no trackers, self-hosted fonts, waitlist localStorage until backend ships.
+Marketing copy must match policy: no trackers, self-hosted fonts, trial signup happens in the AISIA app (no on-site form).

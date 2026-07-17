@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 import { Link, useLocation } from 'react-router-dom'
 import { BrandMark } from '../components/ui/BrandMark'
-import { APP_URL } from '../lib/links'
+import { subscriptionUrl } from '../lib/links'
 
 type NavLink = { label: string; to: string }
 
@@ -69,23 +69,17 @@ export function Nav() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden md:flex items-center">
           <a
-            href={APP_URL}
-            className="text-sm text-white/60 hover:text-white transition-colors px-3 py-2"
-          >
-            Sign in
-          </a>
-          <Link
-            to="/#waitlist"
+            href={subscriptionUrl()}
             className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium text-void transition-transform hover:scale-[1.02] active:scale-[0.98]"
             style={{
               background: 'linear-gradient(135deg, #22d3ee, #a78bfa)',
               boxShadow: '0 0 24px rgba(34,211,238,0.35)',
             }}
           >
-            Join waitlist
-          </Link>
+            Start free trial
+          </a>
         </div>
 
         <button
@@ -134,23 +128,16 @@ export function Nav() {
                 Home
               </Link>
             )}
-            <div className="mt-2 flex items-center gap-2">
+            <div className="mt-2">
               <a
-                href={APP_URL}
-                className="flex-1 text-center px-3 py-2.5 text-sm text-white/70 hover:text-white rounded-lg border border-white/10"
-              >
-                Sign in
-              </a>
-              <Link
-                to="/#waitlist"
-                onClick={() => setMobileOpen(false)}
-                className="flex-1 text-center px-3 py-2.5 text-sm font-medium text-void rounded-lg"
+                href={subscriptionUrl()}
+                className="block text-center px-3 py-2.5 text-sm font-medium text-void rounded-lg"
                 style={{
                   background: 'linear-gradient(135deg, #22d3ee, #a78bfa)',
                 }}
               >
-                Join waitlist
-              </Link>
+                Start free trial
+              </a>
             </div>
           </div>
         </motion.div>

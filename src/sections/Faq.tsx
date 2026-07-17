@@ -9,20 +9,32 @@ const FAQS: { q: string; a: string }[] = [
     a: 'No. AISIA is a reflection and organization system — it helps you articulate priorities, extract structure from conversation, and keep each domain in one clear place. It does not provide medical, legal, financial, therapeutic, or other professional advice. When a thread surfaces an area where qualified help may be useful, the system can flag it and help you define what to bring to that conversation.',
   },
   {
+    q: 'Is this for individuals or couples?',
+    a: 'One household subscription covers you and your partner — each person gets private threads plus shared spaces. Solo users are welcome; you do not need a partner to subscribe.',
+  },
+  {
+    q: 'Is the app available now?',
+    a: 'Yes, for early access via the 14-day free trial. Start from any CTA on this site — you will land in the AISIA app to set up your household. Features continue to roll out in waves through 2026.',
+  },
+  {
     q: 'Is this just ChatGPT with a wrapper?',
     a: 'No. AISIA maintains eight separate guided threads with domain-specific memory, extraction rules, and canvases. Your conversations produce structured artifacts — insights, goals, actions, reminders — that persist per domain. The focus is reflection and organization, not open-ended answers.',
   },
   {
+    q: 'How is this different from Day One or Notion?',
+    a: 'Day One and Notion give you a blank page. AISIA gives you domain-specific guided threads, AI extraction into artifacts, a per-domain canvas, and cross-domain conflict detection — reflection with structure, not a journal or wiki.',
+  },
+  {
     q: 'Where does my data live?',
-    a: "Your data is yours. During early access, everything runs locally or in your private account. We do not sell, train on, or share your content. At launch, you'll be able to export or delete everything with a single action.",
+    a: "Your data is yours. During early access, everything runs in your private account. We do not sell, train on, or share your content. We do not use your conversations to train AI models. You can export or delete everything with a single action.",
   },
   {
     q: 'When can I actually use it?',
-    a: "The v2 prototype is complete internally. Public early access rolls out in waves through 2026 — waitlist first, founding members next, then general availability.",
+    a: 'Start a 14-day free trial from any CTA — you will land in the AISIA app to set up your household. Early access continues through 2026; founding annual pricing is available now.',
   },
   {
     q: "What if I don't need all eight domains?",
-    a: "Explorer lets you pick any two domains free forever. If you outgrow it, upgrading is one click. The point is reflection where you need it — not filling every lane.",
+    a: 'AISIA is organized around eight life domains, but you do not have to use every lane on day one. Household pricing covers both partners either way — start where reflection matters most and grow into the rest over time.',
   },
 ]
 
@@ -35,10 +47,10 @@ export function Faq() {
       eyebrow="Questions"
       heading={
         <>
-          The five things <span className="text-gradient-aurora">everyone asks</span>.
+          Common <span className="text-gradient-aurora">questions</span>.
         </>
       }
-      intro="If you have another, the waitlist form is also our fastest inbox."
+      intro="Have another? Email us at aisia.io@haibuilt.com."
     >
       <div className="max-w-3xl mx-auto space-y-3">
         {FAQS.map((item, i) => {

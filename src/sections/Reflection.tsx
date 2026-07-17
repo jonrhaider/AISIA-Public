@@ -18,10 +18,9 @@ export function Reflection() {
         <>
           <strong className="font-medium text-white/85">AISIA</strong> stands for{' '}
           <strong className="font-medium text-white/85">AI Self Improvement App</strong>. The name
-          is a palindrome — it reads the same forward and backward — and the wordmark&apos;s center{' '}
-          <strong className="font-medium text-white/85">S</strong> is flipped horizontally. Both are
-          deliberate: we believe understanding yourself comes from looking again, and that organized
-          reflection is the path to meaningful self-improvement.
+          is a palindrome — it reads the same forward and backward. This is
+          deliberate: we believe understanding yourself comes from reflection, and that
+          is the path to meaningful self-improvement.
         </>
       }
     >

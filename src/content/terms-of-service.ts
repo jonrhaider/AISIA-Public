@@ -3,11 +3,11 @@ import type { LegalDocument } from '../components/LegalPage'
 /** Marketing-site terms of service — draft for legal review before production deploy. */
 export const TERMS_OF_SERVICE: LegalDocument = {
   title: 'Terms of Service',
-  lastUpdated: 'July 6, 2026',
+  lastUpdated: 'July 10, 2026',
   disclaimer:
     'These terms govern use of the AISIA marketing website. They are provided for transparency and should be reviewed by qualified counsel before you rely on them for compliance decisions.',
   intro:
-    'These Terms of Service ("Terms") are a legal agreement between you and HaiBuilt Inc ("HaiBuilt," "we," "us," or "our") for your use of the public AISIA marketing website — the pages that introduce the product and let you join our waitlist. By accessing or using this site, you agree to these Terms. If you do not agree, please do not use the site. These Terms do not govern the AISIA application itself; separate terms will apply when the app is available.',
+    'These Terms of Service ("Terms") are a legal agreement between you and HaiBuilt Inc ("HaiBuilt," "we," "us," or "our") for your use of the public AISIA marketing website — the pages that introduce the product and link you to the AISIA application. By accessing or using this site, you agree to these Terms. If you do not agree, please do not use the site. These Terms do not govern the AISIA application itself; separate terms apply when you use the app.',
   sections: [
     {
       id: 'who-we-are',
@@ -21,7 +21,7 @@ export const TERMS_OF_SERVICE: LegalDocument = {
       id: 'scope',
       title: '2. What this site is',
       paragraphs: [
-        'This website describes AISIA — a life operating system for guided reflection across eight life domains. The site is for informational and pre-launch purposes. Joining the waitlist does not create an account in the AISIA application and does not guarantee early access, launch timing, or pricing.',
+        'This website describes AISIA — a life operating system for guided reflection across eight life domains. The site is for informational purposes and links you to the AISIA application to start a free trial or subscription. Browsing this site does not create an account; account creation and billing happen in the app.',
       ],
     },
     {
@@ -29,7 +29,7 @@ export const TERMS_OF_SERVICE: LegalDocument = {
       title: '3. Not professional advice',
       paragraphs: [
         'AISIA is a reflection and organization tool. Nothing on this website — including product descriptions, examples, expert personas, or marketing copy — is medical, legal, financial, therapeutic, or other professional advice.',
-        'Do not rely on this site or on future AISIA features as a substitute for qualified professionals. If a topic requires licensed help, consult someone qualified to assist you.',
+        'Do not rely on this site or on AISIA features as a substitute for qualified professionals. If a topic requires licensed help, consult someone qualified to assist you.',
       ],
     },
     {
@@ -46,11 +46,11 @@ export const TERMS_OF_SERVICE: LegalDocument = {
       ],
     },
     {
-      id: 'waitlist',
-      title: '5. Waitlist',
+      id: 'trial-signup',
+      title: '5. Trial signup',
       paragraphs: [
-        'If you submit an email to join the waitlist, you represent that the address is yours and that you are permitted to use it. Today, waitlist information is stored locally in your browser and is not sent to our servers. When we connect the waitlist to a mailing service, we will update our Privacy Policy and these Terms if needed.',
-        'We may remove waitlist entries or decline access if we believe a submission is fraudulent, abusive, or violates these Terms.',
+        'Trial and subscription CTAs on this site link to the AISIA application (for example, the app subscription page). When you click those links, you leave this marketing site. Your use of the app — including account creation, billing, and data handling — is governed by the app\'s terms and privacy practices, not these Terms.',
+        'Pricing, features, and availability described on this site may change. The terms presented in the app at the time you sign up govern your subscription.',
       ],
     },
     {
@@ -65,7 +65,7 @@ export const TERMS_OF_SERVICE: LegalDocument = {
       id: 'third-party',
       title: '7. Third-party links',
       paragraphs: [
-        'The site may link to third-party websites or services (for example, a sign-in URL for the AISIA application). We do not control and are not responsible for third-party sites. Your use of them is at your own risk and subject to their terms and policies.',
+        'The site links to the AISIA application for trial signup and subscription. We do not control and are not responsible for the app or other third-party sites. Your use of them is at your own risk and subject to their terms and policies.',
       ],
     },
     {
@@ -73,7 +73,7 @@ export const TERMS_OF_SERVICE: LegalDocument = {
       title: '8. Disclaimers',
       paragraphs: [
         'THE SITE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.',
-        'We do not warrant that the site will be uninterrupted, error-free, or free of harmful components. Product features, pricing, and launch details described on the site may change before release.',
+        'We do not warrant that the site will be uninterrupted, error-free, or free of harmful components. Product features, pricing, and availability described on the site may change.',
       ],
     },
     {
@@ -81,7 +81,7 @@ export const TERMS_OF_SERVICE: LegalDocument = {
       title: '9. Limitation of liability',
       paragraphs: [
         'TO THE MAXIMUM EXTENT PERMITTED BY LAW, HAIBUILT AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS, DATA, OR GOODWILL, ARISING FROM YOUR USE OF THE SITE.',
-        'OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE SITE WILL NOT EXCEED ONE HUNDRED U.S. DOLLARS (US $100) OR THE AMOUNT YOU PAID US TO USE THE SITE IN THE TWELVE MONTHS BEFORE THE CLAIM, WHICHEVER IS GREATER. BECAUSE THE SITE IS FREE TO USE TODAY, THE ONE HUNDRED DOLLAR CAP WILL TYPICALLY APPLY.',
+        'OUR TOTAL LIABILITY FOR ANY CLAIM ARISING OUT OF OR RELATING TO THE SITE WILL NOT EXCEED ONE HUNDRED U.S. DOLLARS (US $100) OR THE AMOUNT YOU PAID US TO USE THE SITE IN THE TWELVE MONTHS BEFORE THE CLAIM, WHICHEVER IS GREATER. BECAUSE THE SITE IS FREE TO USE, THE ONE HUNDRED DOLLAR CAP WILL TYPICALLY APPLY.',
       ],
     },
     {

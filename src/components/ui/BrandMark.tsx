@@ -65,7 +65,7 @@ export function BrandMark({
           className={`font-display font-bold tracking-tight text-white ${wordClassName}`}
           style={{ letterSpacing: '-0.02em' }}
         >
-          AI<span className="inline-block scale-x-[-1]">S</span>IA
+          AISIA
         </span>
       )}
     </div>

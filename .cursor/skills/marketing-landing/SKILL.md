@@ -1,5 +1,5 @@
 ---
-description: Author and edit sections of the AISIA public marketing website. Load whenever editing files under website/src, adding a new landing section, adjusting copy, or wiring the waitlist CTA. Enforces narrative flow, tone, section spec, and brand parity with prototype-2.
+description: Author and edit sections of the AISIA public marketing website. Load whenever editing files under website/src, adding a new landing section, adjusting copy, or wiring trial CTAs. Enforces narrative flow, tone, section spec, and brand parity with prototype-2.
 ---
 
 # Marketing Landing — AISIA Public Site
@@ -8,13 +8,13 @@ description: Author and edit sections of the AISIA public marketing website. Loa
 
 - Adding a new section to the landing page or replacing an existing one.
 - Rewriting hero, feature, or CTA copy.
-- Editing waitlist form UI/UX.
+- Editing trial CTA copy and links.
 - Reviewing whether a page section is on-brand for AISIA.
 
 ## Do not use for
 
 - Editing the actual app in `prototype-2/` (that project has its own skills).
-- Backend/newsletter wiring (out of scope; waitlist is local-only).
+- Backend or payment processing (out of scope; trial signup happens in the AISIA app).
 
 ---
 
@@ -24,10 +24,10 @@ description: Author and edit sections of the AISIA public marketing website. Loa
 
 Crisp, focused on value proposition and CTA. Sections in order:
 
-1. **Nav** — Domains, How it works, Pricing, About · Join waitlist
-2. **Hero** — organization promise + waitlist
-3. **Domains** — eight-domain infinite carousel (visual proof, pauses on hover); link to About for guided threads
-4. **How it works** — Reflect → Extract → Canvas pipeline
+1. **Nav** — Domains, How it works, Pricing, About · Start free trial
+2. **Hero** — organization promise + trial CTA
+3. **How it works** — Reflect → Extract → Canvas pipeline
+4. **Domains** — eight-domain infinite carousel (visual proof, pauses on hover); link to About for guided threads
 5. **Pricing**
 6. **Final CTA**
 
@@ -48,7 +48,7 @@ Do **not** duplicate the Domains grid and Guided threads on the same page.
 - **Lead with organization** — AISIA helps people stay organized on priorities across eight life domains.
 - **Self-improvement through reflection** — reflection is the method; structure makes it stick. Not crisis or spiral framing.
 - **AISIA = AI Self Improvement App** — spell out the acronym in Hero and Reflection at least once.
-- **Palindrome + flipped S** — deliberate brand story in Reflection; not a heritage logo.
+- **Palindrome** — deliberate brand story in Reflection; not a heritage logo.
 - **Not professional advice** — artifacts and flags for when a human belongs in the loop.
 - **Avoid** — "get out of your head," "think out loud," "inner monologue," spiral/mental-health-negative framing, "eight experts," advisory persona titles.
 
@@ -65,7 +65,7 @@ Do **not** duplicate the Domains grid and Guided threads on the same page.
 
 ### Approved phrasings
 
-- Hero headline: "Your life, organized across eight domains."
+- Hero headline: "Every part of your life — in one clear place."
 - Eyebrow: "AI Self Improvement App"
 - Tagline options: "The AI Self Improvement App." · "A life operating system for guided reflection." · "Reflect. Extract. Stay organized."
 - Product noun: "life operating system" (lowercase in prose, Title Case only in headings).
@@ -80,7 +80,7 @@ Every section on the landing page must satisfy **all four**:
 1. **Purpose** — one crisp job (see Narrative flow). If a section is doing two jobs, split or drop.
 2. **Visual anchor** — at least one deliberate visual (orbital diagram, bento mock, gradient device, pipeline animation). No text-only walls.
 3. **Rhythm** — vertical spacing uses the site's `Section` container (see `src/components/ui/Section.tsx` once created); each section pairs a Syne display heading, IBM Plex Mono eyebrow, and DM Sans body.
-4. **CTA continuity** — if the section is >1 viewport tall, it repeats the primary CTA or an anchor to `#waitlist`.
+4. **CTA continuity** — if the section is >1 viewport tall, it repeats the primary CTA or an anchor to `#signup`.
 
 ---
 
@@ -98,12 +98,12 @@ Full details: `.cursor/rules/website-brand.mdc` (auto-attached when editing `src
 
 ---
 
-## Waitlist rules
+## Trial CTA rules
 
-- Single input: email + "Join waitlist" button. No phone, name, or role.
-- Client-side email validation only.
-- On submit: store `{ email, ts }` in `localStorage["aisia_waitlist"]` (array), disable form, show success message: "You're on the list. Check your inbox — we'll reach out."
-- Provide a subtle reset link in the success state (`Change email`) so multiple submissions during dev don't require devtools.
+- Primary CTA: "Start 14-day free trial" or "Start free trial" — links to `subscriptionUrl()` in `src/lib/links.ts`.
+- Secondary CTA: "Lock in $99/yr founding" — links to `subscriptionUrl('yearly_founding')`.
+- No on-site email form; trial signup happens in the AISIA app.
+- Set `VITE_APP_URL` in production so CTAs point to the real app.
 - No third-party analytics or trackers.
 
 ---
@@ -141,4 +141,4 @@ Before marking a section "done" during Node 2–5:
 - [ ] Heading in Syne, eyebrow in IBM Plex Mono uppercase, body in DM Sans.
 - [ ] Any accent colors come from tokens or `LIFE_AREAS`.
 - [ ] Motion respects `prefers-reduced-motion` (Framer Motion respects this by default when using `MotionConfig reducedMotion="user"`).
-- [ ] Waitlist anchor `#waitlist` is reachable within one section click.
+- [ ] Trial CTA anchor `#signup` is reachable within one section click.

@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import { ArrowDown, Sparkles } from 'lucide-react'
+import { ArrowDown, ArrowRight, Sparkles } from 'lucide-react'
 import { OrbitalHero } from '../components/OrbitalHero'
-import { WaitlistForm } from '../components/WaitlistForm'
+import { subscriptionUrl } from '../lib/links'
 
 export function Hero() {
   return (
@@ -37,10 +37,9 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-[42px] sm:text-6xl lg:text-[68px] font-bold leading-[1.02] tracking-tight text-white"
           >
-            Your life,
+            Every part of your life —
             <br />
-            <span className="text-gradient-aurora">organized</span> across
-            eight domains.
+            <span className="text-gradient-aurora">in one clear place</span>.
           </motion.h1>
 
           <motion.p
@@ -51,19 +50,43 @@ export function Hero() {
           >
             <strong className="font-medium text-white/85">AISIA</strong> — the{' '}
             <strong className="font-medium text-white/85">AI Self Improvement App</strong> — is a
-            life operating system for guided reflection. Use AI to think through your priorities,
-            extract insights and artifacts, and keep each part of your life in one clear place. Not
-            direction. Not professional advice.
+            life operating system for guided reflection. Think through your priorities with AI,
+            extract insights and artifacts, and keep marriage, money, health, and everything else
+            organized.{' '}
+            <strong className="font-medium text-white/85">
+              One subscription covers your household
+            </strong>{' '}
+            — you and your partner, with private threads and shared spaces.
           </motion.p>
 
           <motion.div
-            id="waitlist"
+            id="signup"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.22, ease: [0.22, 1, 0.36, 1] }}
             className="mt-9 max-w-md"
           >
-            <WaitlistForm id="hero-waitlist" variant="hero" />
+            <a
+              href={subscriptionUrl()}
+              className="inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-[15px] font-medium text-void transition-transform hover:scale-[1.02] active:scale-[0.98] w-full sm:w-auto"
+              style={{
+                background: 'linear-gradient(135deg, #22d3ee, #a78bfa)',
+                boxShadow: '0 0 32px rgba(34,211,238,0.35), 0 8px 24px rgba(0,0,0,0.35)',
+              }}
+            >
+              Start 14-day free trial
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <p className="mt-3 text-[11px] text-white/40 leading-relaxed">
+              Household pricing · $15/mo or $99/yr founding after trial. Reflection and organization
+              — not professional advice.{' '}
+              <Link
+                to="/privacy"
+                className="underline underline-offset-2 hover:text-white/60 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </p>
           </motion.div>
 
           <motion.div

@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom'
 import { BrandMark } from '../components/ui/BrandMark'
-import { APP_URL } from '../lib/links'
+import { subscriptionUrl } from '../lib/links'
 
 const LINKS = {
   Product: [
     { label: 'Domains', href: '/#domains' },
     { label: 'How it works', href: '/#how-it-works' },
     { label: 'Pricing', href: '/#pricing' },
-    { label: 'Join waitlist', href: '/#waitlist' },
+    { label: 'Start free trial', href: subscriptionUrl() },
   ],
   About: [
     { label: 'Why AISIA', href: '/about#reflection' },
@@ -18,7 +18,6 @@ const LINKS = {
   ],
   Company: [
     { label: 'About', href: '/about' },
-    { label: 'Sign in', href: APP_URL },
     { label: 'Contact', href: 'mailto:aisia.io@haibuilt.com' },
   ],
   Legal: [

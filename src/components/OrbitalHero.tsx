@@ -145,7 +145,7 @@ export function OrbitalHero({ size = 420 }: { size?: number }) {
             }}
           >
             <span className="font-display text-xl font-bold text-white leading-none tracking-tight">
-              AI<span className="inline-block scale-x-[-1]">S</span>IA
+              AISIA
             </span>
             <span className="mt-1 font-mono text-[9px] uppercase tracking-[0.24em] text-white/50">
               Core

@@ -104,7 +104,7 @@ export function HowItWorks() {
         </div>
 
         <p className="mt-6 text-center text-[11px] font-mono uppercase tracking-[0.2em] text-white/35">
-          Illustrative mock — reflective prompts, not professional advice
+          Illustrative mock
         </p>
       </motion.div>
     </Section>

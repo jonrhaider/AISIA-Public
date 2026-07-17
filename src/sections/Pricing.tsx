@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Check, Sparkles } from 'lucide-react'
 import { Section } from '../components/ui/Section'
 import { LiquidPanel } from '../components/ui/LiquidPanel'
+import { subscriptionUrl, type SubscriptionPlan } from '../lib/links'
 
 interface Tier {
   name: string
@@ -13,60 +14,64 @@ interface Tier {
   body: string
   features: string[]
   cta: string
-  href: string
+  plan?: SubscriptionPlan
+  note?: string
 }
+
+const HOUSEHOLD_FEATURES = [
+  'All 8 domains + guided threads for both partners',
+  'Shared household canvas + personal private spaces',
+  'You choose what stays private vs. what goes shared',
+  'Life Balance radar + attention scoring',
+  'Cross-domain conflict detection',
+  'Unlimited history & search',
+]
 
 const TIERS: Tier[] = [
   {
-    name: 'Explorer',
-    eyebrow: 'Try the concept',
+    name: 'Free trial',
+    eyebrow: 'Start here',
     price: '$0',
-    cadence: 'forever',
+    cadence: 'for 14 days',
     accent: '#22d3ee',
-    body: 'Two domains, two guided threads, and the full canvas experience — free for as long as you want.',
+    body: 'Every household gets a 14-day free trial — full access for you and your partner. Explore every domain, set up your shared canvas, and see how AISIA fits your life before you subscribe.',
     features: [
-      '2 life domains of your choice',
-      'Full living-canvas dashboard',
-      'Weekly Review',
-      'Local-only history',
+      '14 days · full household access',
+      'Both partners included from day one',
+      'All 8 domains + shared canvas',
+      'Personal private threads + shared spaces',
+      'No charge until the trial ends',
     ],
-    cta: 'Start free',
-    href: '#waitlist',
+    cta: 'Start free trial',
   },
   {
-    name: 'Complete',
-    eyebrow: 'The whole life',
-    price: '$14',
-    cadence: 'per month',
+    name: 'Monthly household',
+    eyebrow: 'Pay as you go',
+    price: '$15',
+    cadence: 'per month · household',
     accent: '#a78bfa',
     featured: true,
-    body: 'All eight domains, cross-domain signals, unlimited history, and priority extraction.',
-    features: [
-      'All 8 domains + guided threads',
-      'Life Balance radar + attention scoring',
-      'Cross-domain conflict detection',
-      'Unlimited history & search',
-      'Priority extraction pipeline',
-    ],
-    cta: 'Join waitlist',
-    href: '#waitlist',
+    body: 'One subscription for your household — shared access with your significant other, with privacy separation built in. Cancel anytime.',
+    features: HOUSEHOLD_FEATURES,
+    cta: 'Start free trial',
+    plan: 'monthly',
   },
   {
-    name: 'Founding',
-    eyebrow: 'Shape v1',
+    name: 'Founding annual',
+    eyebrow: 'Limited founding offer',
     price: '$99',
-    cadence: 'per year · lifetime lock',
+    cadence: 'per year · household',
     accent: '#fb7185',
-    body: 'Lock in founding pricing forever. Direct line to the team. Vote on the roadmap. First access to new domains and features.',
+    body: 'Lock in founding household pricing for life. Subscribe during this promotional window and your rate stays $99/year — even after the offer ends for everyone else.',
     features: [
-      'Everything in Complete',
-      'Lifetime founding rate',
-      'Private Discord + founder line',
-      'Roadmap voting',
-      'First access to new reflection tools',
+      ...HOUSEHOLD_FEATURES,
+      'Lifetime $99/year rate for your household',
+      'Direct line to the team during early access',
+      'Roadmap input + first access to new tools',
     ],
-    cta: 'Apply for founding',
-    href: '#waitlist',
+    cta: 'Start free trial',
+    plan: 'yearly_founding',
+    note: 'After this founding window closes, new households will pay $150/year. Yours stays $99.',
   },
 ]
 
@@ -80,10 +85,10 @@ export function Pricing() {
         <>
           Fair pricing.
           <br />
-          <span className="text-gradient-aurora">No enterprise dance.</span>
+          <span className="text-gradient-aurora">Built for households.</span>
         </>
       }
-      intro="AISIA is a subscription that stays out of your way. No credit card required to explore. No hidden Enterprise tier. When it ships, this is what it costs."
+      intro="AISIA is priced per household — not per person. Start with a 14-day free trial, then choose monthly or founding annual. Founding members are the first households to subscribe — locking in the lowest rate ever offered ($99/year for life), with direct input on the roadmap. No Enterprise tier. No per-seat math."
     >
       <div className="grid md:grid-cols-3 gap-5 items-stretch">
         {TIERS.map((tier, i) => (
@@ -121,7 +126,7 @@ export function Pricing() {
                 {tier.name}
               </h3>
 
-              <div className="mt-5 flex items-baseline gap-2">
+              <div className="mt-5 flex items-baseline gap-2 flex-wrap">
                 <span
                   className="font-display text-5xl font-bold tabular-nums"
                   style={{ color: tier.featured ? tier.accent : 'white' }}
@@ -149,8 +154,14 @@ export function Pricing() {
                 ))}
               </ul>
 
+              {tier.note && (
+                <p className="mt-5 text-xs text-white/45 leading-relaxed border-t border-white/[0.06] pt-4">
+                  {tier.note}
+                </p>
+              )}
+
               <a
-                href={tier.href}
+                href={subscriptionUrl(tier.plan)}
                 className={`mt-7 inline-flex items-center justify-center rounded-xl px-4 py-3 text-sm font-medium transition-transform hover:scale-[1.02] active:scale-[0.98] ${tier.featured ? 'text-void' : 'ghost-btn'}`}
                 style={
                   tier.featured
@@ -168,9 +179,17 @@ export function Pricing() {
         ))}
       </div>
 
-      <p className="mt-10 text-center text-xs font-mono uppercase tracking-[0.18em] text-white/40">
-        Pricing shown for launch · pre-launch access is invite-only via the waitlist
+      <p className="mt-10 text-center text-sm text-white/50 max-w-2xl mx-auto leading-relaxed">
+        <span className="text-white/70 font-medium">Joint household pricing</span> means one
+        subscription covers you and your significant other — with separate private threads and a
+        shared canvas you both control. You decide what stays personal and what you bring into
+        the household view.
+      </p>
+
+      <p className="mt-4 text-center text-xs font-mono uppercase tracking-[0.18em] text-white/40">
+        14-day free trial · card required at checkout · cancel anytime in billing settings
       </p>
     </Section>
   )
 }
+

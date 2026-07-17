@@ -8,8 +8,8 @@ export function HomePage() {
   return (
     <>
       <Hero />
-      <Domains />
       <HowItWorks />
+      <Domains />
       <Pricing />
       <FinalCta />
     </>

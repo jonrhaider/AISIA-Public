@@ -3,11 +3,11 @@ import type { LegalDocument } from '../components/LegalPage'
 /** Marketing-site security overview — draft for legal review before production deploy. */
 export const SECURITY_OVERVIEW: LegalDocument = {
   title: 'Security',
-  lastUpdated: 'July 6, 2026',
+  lastUpdated: 'July 10, 2026',
   disclaimer:
     'This page describes security practices for the AISIA marketing website. It is provided for transparency and should be reviewed by qualified counsel before you rely on it for compliance decisions.',
   intro:
-    'Security matters to AISIA because the product is built around personal reflection across sensitive life domains. This page explains how we protect the marketing website today. It does not describe the full security architecture of the AISIA application, which will have its own controls when it launches. For what data this site collects and how we use it, see our Privacy Policy.',
+    'Security matters to AISIA because the product is built around personal reflection across sensitive life domains. This page explains how we protect the marketing website today. It does not describe the full security architecture of the AISIA application, which has its own controls. For what data this site collects and how we use it, see our Privacy Policy.',
   sections: [
     {
       id: 'approach',
@@ -21,7 +21,7 @@ export const SECURITY_OVERVIEW: LegalDocument = {
       title: '2. What this page covers',
       paragraphs: [
         'This page applies to the AISIA marketing website hosted on Cloudflare Pages. It covers how we deliver the site, protect data in transit, and handle the limited information described in our Privacy Policy.',
-        'When the AISIA application launches with accounts, conversation data, and AI processing, we will publish security information appropriate to those systems.',
+        'Trial signup and account data are handled in the AISIA application, which has its own security practices.',
       ],
     },
     {
@@ -44,6 +44,7 @@ export const SECURITY_OVERVIEW: LegalDocument = {
       title: '5. Data minimization',
       paragraphs: ['On this marketing site we intentionally avoid:'],
       bullets: [
+        'Collecting form submissions or storing user data on our servers',
         'Advertising or analytics trackers',
         'Third-party marketing pixels',
         'Non-essential cookies for tracking',
@@ -51,11 +52,10 @@ export const SECURITY_OVERVIEW: LegalDocument = {
       ],
     },
     {
-      id: 'waitlist',
-      title: '6. Waitlist data',
+      id: 'trial-signup',
+      title: '6. Trial signup',
       paragraphs: [
-        'Today, waitlist emails are stored in your browser\'s local storage only — not on our servers. That means we do not centrally store waitlist submissions from this site yet. When we connect the waitlist to a backend or email provider, we will use encrypted transport and update this page and our Privacy Policy.',
-        'You can clear waitlist data on your device through your browser settings or the waitlist "Change" control.',
+        'This marketing site does not process trial signups or store account information. When you click a trial or subscription CTA, you are directed to the AISIA application, which handles authentication, billing, and data storage under its own security controls.',
       ],
     },
     {

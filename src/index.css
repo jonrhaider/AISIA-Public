@@ -151,12 +151,21 @@
   display: flex;
   width: max-content;
   gap: 1rem;
-  animation: domain-marquee 55s linear infinite;
   will-change: transform;
 }
 
-.domains-marquee:hover .domains-marquee-track,
-.domains-marquee:focus-within .domains-marquee-track {
+/* JS-driven carousel — no CSS animation */
+.domains-marquee-track--interactive {
+  animation: none;
+}
+
+/* Fallback for no-JS / reduced-motion horizontal scroll */
+.domains-marquee:not(:has(.domains-marquee-track--interactive)) .domains-marquee-track {
+  animation: domain-marquee 38s linear infinite;
+}
+
+.domains-marquee:hover .domains-marquee-track:not(.domains-marquee-track--interactive),
+.domains-marquee:focus-within .domains-marquee-track:not(.domains-marquee-track--interactive) {
   animation-play-state: paused;
 }
 
@@ -183,7 +192,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .domains-marquee-track {
+  .domains-marquee-track,
+  .domains-marquee-track--interactive {
     animation: none;
   }
 }
